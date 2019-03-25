@@ -3,13 +3,20 @@ import ketai.ui.*;
 KetaiBluetooth bt = new KetaiBluetooth(this);
 KetaiList klist;
 boolean isConfiguring=true;
-String currentDeviceConnected="";
+String currentDeviceConnected="",received_data="";
+byte[] data={'t','e','s'};
 void setup() {
   size(displayWidth,displayHeight);
   orientation(PORTRAIT);
   background(0);
   bt.start();
   isConfiguring=true;
+}
+void onBluetoothDataEvent(String who,byte[] data) {
+  if (isConfiguring) {
+    return;
+  }
+  received_data = new String(data);
 }
 void draw() {
   if (isConfiguring==true) {
@@ -20,6 +27,8 @@ void draw() {
     background(150,150,150);
     textAlign(LEFT);
     text("Connected to " + currentDeviceConnected,100,50);
+    bt.writeToDeviceName(currentDeviceConnected,data);
+    bt.broadcast(data);
   }
 }
 void onKetaiListSelection(KetaiList klist) {
