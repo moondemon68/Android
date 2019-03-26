@@ -10,6 +10,7 @@ void setup() {
   background(0);
   bt.start();
   isConfiguring=true;
+  textSize(30);
 }
 void onBluetoothDataEvent(String who,byte[] data) {
   if (isConfiguring) {
