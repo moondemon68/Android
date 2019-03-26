@@ -6,7 +6,7 @@ Serial bluetooth;
 Serial arduino;
 
 // variabel untuk menerima data dari serial port
-char recieve_data;
+char recieved_data;
 
 // setup pertama kali untuk aplikasi berbasis processing
 // metod ini serupa dengan void setup() pada arduino
@@ -14,7 +14,7 @@ void setup() {
   // definisi serial port untuk bluetooth dan arduino pada com4
   // note: com4 diganti dengan lokasi dimana bluetooth terdeteksi sistem
   bluetooth = new Serial (this, "COM4", 9600);
-  arduino = new Serial (this, "COM4", 9600);
+  arduino = new Serial (this, "COM5", 9600);
   // ukuran GUI
   size (400, 300);
   // warna biru

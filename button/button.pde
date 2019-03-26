@@ -7,8 +7,8 @@ import android.os.Bundle;
 boolean isConfiguring=true;
 String currentDeviceConnected="",received_data="";
 byte[] data={'t','e','s'};
-byte[] red_data={'1'};
-byte[] blue_data={'0'};
+byte[] red_data={'0'};
+byte[] blue_data={'1'};
 //variable untuk tombol kirim ke device
 int tombol_kirim_x1 = 50;
 int tombol_kirim_y1 = 100;

@@ -23,12 +23,6 @@ void setup() {
 	Serial.begin(serial_baud_rate);
 }
 
-
-
-
-
-
-
 //method yang dijalankan berulang (continue Loop)
 // methon in merupakan method utama pada arduino
 void loop()
